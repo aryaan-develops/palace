@@ -134,7 +134,7 @@ const Hero = () => {
                 alignItems: 'center'
             }}>
                 <div style={{
-                    fontFamily: "'Mrs Saint Delafield', cursive",
+                    fontFamily: "'Bodoni Moda', serif",
                     fontSize: 'clamp(3.5rem, 11vw, 8.5rem)',
                     color: '#ffffff',
                     fontWeight: 400,
@@ -167,7 +167,8 @@ const Hero = () => {
                 <p style={{
                     fontSize: 'clamp(1.4rem, 3.5vw, 2.4rem)',
                     color: '#fff',
-                    fontFamily: "'Mrs Saint Delafield', cursive",
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontStyle: 'italic',
                     marginTop: '10px',
                     fontWeight: 400,
                     opacity: 0.9,

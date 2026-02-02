@@ -58,10 +58,10 @@ const About = () => {
                 <div ref={textRef} className="about-text">
                     <span style={{ fontSize: '0.8rem', letterSpacing: '4px', textTransform: 'uppercase', color: 'var(--primary)', display: 'block', marginBottom: '15px' }}>THE STORY</span>
                     <h2 className="mb-20 title-responsive">Unmatched <br />Hilltop Hospitality</h2>
-                    <p className="mb-20" style={{ fontSize: '2.4rem', fontWeight: '400', opacity: 0.9, fontFamily: "'Mrs Saint Delafield', cursive", lineHeight: 1.2 }}>
+                    <p className="mb-20" style={{ fontSize: '1.4rem', fontWeight: '400', opacity: 0.9, fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', lineHeight: 1.4 }}>
                         Welcome to Trinity Palace, a luxurious sanctuary where modern elegance meets the serenity of nature. Located in the heart of Narayanpur, Chas, our resort is designed to offer a royal escape within Bokaro Steel City.
                     </p>
-                    <p className="mb-40" style={{ fontSize: '2.1rem', fontWeight: '400', opacity: 0.8, fontFamily: "'Mrs Saint Delafield', cursive", lineHeight: 1.2 }}>
+                    <p className="mb-40" style={{ fontSize: '1.2rem', fontWeight: '400', opacity: 0.8, fontFamily: "'Cormorant Garamond', serif", lineHeight: 1.6 }}>
                         From our grand architectural frontage to our meticulously designed interior spaces, every detail at Trinity Palace is crafted to ensure your stay is as memorable as it is comfortable.
                     </p>
                     <a href="#accommodation" className="btn-primary" style={{ background: '#fff', color: 'var(--sage)' }}>DISCOVER LUXURY</a>

@@ -24,7 +24,7 @@ const Amenities = () => {
                             {item.icon}
                         </div>
                         <h3 style={{ fontSize: '1.4rem', marginBottom: '10px' }}>{item.title}</h3>
-                        <p style={{ opacity: 0.8, fontSize: '1.6rem', fontFamily: "'Mrs Saint Delafield', cursive" }}>{item.desc}</p>
+                        <p style={{ opacity: 0.8, fontSize: '1.1rem', fontFamily: "'Cormorant Garamond', serif" }}>{item.desc}</p>
                     </div>
                 ))}
             </div>

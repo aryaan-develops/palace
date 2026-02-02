@@ -52,10 +52,10 @@ function App() {
           <div className="contact-grid">
             <div className="contact-info-panel">
               <h2 className="mb-40" style={{ fontSize: '3rem' }}>Making Moments <br /><span className="text-gold">Memorable</span></h2>
-              <p className="mb-20" style={{ fontSize: '2.4rem', fontWeight: '400', opacity: 0.9, fontFamily: "'Mrs Saint Delafield', cursive", lineHeight: 1.2 }}>
+              <p className="mb-20" style={{ fontSize: '1.4rem', fontWeight: '400', opacity: 0.9, fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', lineHeight: 1.4 }}>
                 Welcome to Trinity Palace, a luxurious retreat where elegance meets nature. Nestled in lush landscapes, our resort offers opulent accommodations and rejuvenating experiences on the tranquil outskirts of Bokaro Steel City.
               </p>
-              <p className="mb-40" style={{ opacity: 0.8, fontSize: '2.1rem', fontFamily: "'Mrs Saint Delafield', cursive", lineHeight: 1.2 }}>Get in touch with us for special reservations, event planning, or luxury staycations in Bokaro Steel City.</p>
+              <p className="mb-40" style={{ opacity: 0.8, fontSize: '1.2rem', fontFamily: "'Cormorant Garamond', serif", lineHeight: 1.6 }}>Get in touch with us for special reservations, event planning, or luxury staycations in Bokaro Steel City.</p>
 
               <div className="contact-details">
                 <div>
@@ -86,7 +86,7 @@ function App() {
       <footer className="main-footer">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h2 className="brand-logo" style={{ fontFamily: "'Mrs Saint Delafield', cursive", fontSize: '3.5rem', textTransform: 'none', letterSpacing: '0' }}>TRINITY <span className="text-gold">PALACE</span></h2>
+            <h2 className="brand-logo" style={{ fontFamily: "'Bodoni Moda', serif", fontSize: '2.5rem', textTransform: 'uppercase', letterSpacing: '2px' }}>TRINITY <span className="text-gold">PALACE</span></h2>
             <p className="brand-desc">A premium hilltop resort experience blending luxury with the untamed beauty of nature.</p>
           </div>
           <div className="footer-links">

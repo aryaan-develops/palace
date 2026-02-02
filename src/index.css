@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Fredoka:wght@300..700&family=Pinyon+Script&family=Italianno&family=Mrs+Saint+Delafield&family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
   --primary: #c5a367;
@@ -82,7 +82,7 @@
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   background-color: var(--bg-dark);
   color: var(--text-light);
   overflow-x: hidden;
@@ -91,9 +91,9 @@ body {
 }
 
 p {
-  font-family: 'Mrs Saint Delafield', cursive;
-  font-size: 2rem;
-  line-height: 1.4;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 /* Lenis Smooth Scroll Setup */
@@ -127,8 +127,9 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Bodoni Moda', serif;
   font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 h2 {
