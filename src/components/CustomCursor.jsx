@@ -91,15 +91,45 @@ const CustomCursor = () => {
             });
         };
 
+        const handleTouch = (e) => {
+            const touch = e.touches[0];
+            gsap.to(cursor, {
+                x: touch.clientX,
+                y: touch.clientY,
+                duration: 0
+            });
+            gsap.to(follower, {
+                x: touch.clientX,
+                y: touch.clientY,
+                duration: 0.15
+            });
+            gsap.to([cursor, follower], { opacity: 1, duration: 0.2 });
+            createBubble(touch.clientX, touch.clientY);
+        };
+
+        const handleTouchStart = (e) => {
+            handleTouch(e);
+        };
+
+        const handleTouchEnd = () => {
+            gsap.to([cursor, follower], { opacity: 0, duration: 0.3 });
+        };
+
         // Mutation Observer to handle dynamic content
         const observer = new MutationObserver(attachHoverListeners);
         observer.observe(document.body, { childList: true, subtree: true });
 
         window.addEventListener('mousemove', moveCursor);
+        window.addEventListener('touchstart', handleTouchStart);
+        window.addEventListener('touchmove', handleTouch);
+        window.addEventListener('touchend', handleTouchEnd);
         attachHoverListeners();
 
         return () => {
             window.removeEventListener('mousemove', moveCursor);
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchmove', handleTouch);
+            window.removeEventListener('touchend', handleTouchEnd);
             observer.disconnect();
         };
     }, []);

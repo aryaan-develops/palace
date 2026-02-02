@@ -39,7 +39,7 @@
 
   .custom-cursor,
   .custom-cursor-follower {
-    display: none !important;
+    display: flex;
   }
 
   * {
