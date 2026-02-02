@@ -134,14 +134,12 @@ const Hero = () => {
                 alignItems: 'center'
             }}>
                 <div style={{
-                    fontFamily: "'Fredoka', sans-serif",
-                    fontSize: 'clamp(2rem, 8vw, 6rem)',
+                    fontFamily: "'Mrs Saint Delafield', cursive",
+                    fontSize: 'clamp(3.5rem, 11vw, 8.5rem)',
                     color: '#ffffff',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.05em',
-                    fontWeight: 700,
+                    fontWeight: 400,
                     margin: 0,
-                    lineHeight: 1,
+                    lineHeight: 1.1,
                     textShadow: `
                         2px 2px 0px rgba(0,0,0,0.2),
                         4px 4px 0px rgba(0,0,0,0.1),
@@ -167,13 +165,13 @@ const Hero = () => {
                 </div>
 
                 <p style={{
-                    fontSize: 'clamp(0.8rem, 2vw, 1.2rem)',
+                    fontSize: 'clamp(1.4rem, 3.5vw, 2.4rem)',
                     color: '#fff',
-                    letterSpacing: '0.5em',
-                    marginTop: '25px',
-                    textTransform: 'uppercase',
-                    fontWeight: 300,
-                    opacity: 0.8
+                    fontFamily: "'Mrs Saint Delafield', cursive",
+                    marginTop: '10px',
+                    fontWeight: 400,
+                    opacity: 0.9,
+                    textShadow: '0px 4px 10px rgba(0,0,0,0.3)'
                 }}>
                     {slides[currentSlide].subtitle}
                 </p>

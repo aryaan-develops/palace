@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Fredoka:wght@300..700&family=Pinyon+Script&family=Italianno&family=Mrs+Saint+Delafield&family=Rouge+Script&display=swap');
 
 :root {
   --primary: #c5a367;
@@ -88,6 +88,12 @@ body {
   overflow-x: hidden;
   line-height: 1.7;
   font-size: 16px;
+}
+
+p {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 2rem;
+  line-height: 1.4;
 }
 
 /* Lenis Smooth Scroll Setup */

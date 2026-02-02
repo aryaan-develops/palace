@@ -27,7 +27,7 @@ const Accommodation = () => {
         <section id="accommodation" className="accommodation-section" style={{ background: 'var(--bg-light)', color: 'var(--text-dark)' }}>
             <div className="section-header mb-40">
                 <h2 className="acc-title">Suites & <span style={{ color: 'var(--primary)' }}>Villas</span></h2>
-                <p style={{ fontSize: '1.2rem', opacity: 0.6, maxWidth: '600px' }}>
+                <p style={{ fontSize: '2.2rem', opacity: 0.8, maxWidth: '600px', fontFamily: "'Mrs Saint Delafield', cursive", lineHeight: 1 }}>
                     Expertly styled and purposefully appointed, taking its cues from the tropical beauty of this paradise.
                 </p>
             </div>
@@ -48,7 +48,7 @@ const Accommodation = () => {
                         <div className="info-box" style={{ padding: '30px' }}>
                             <span style={{ fontSize: '0.8rem', letterSpacing: '2px', color: 'var(--primary)', textTransform: 'uppercase', display: 'block', marginBottom: '10px' }}>{item.subtitle}</span>
                             <h3 style={{ fontSize: '1.8rem', marginBottom: '15px' }}>{item.title}</h3>
-                            <p style={{ opacity: 0.7, marginBottom: '25px', fontSize: '0.95rem' }}>{item.desc}</p>
+                            <p style={{ opacity: 0.8, marginBottom: '25px', fontSize: '1.8rem', fontFamily: "'Mrs Saint Delafield', cursive", lineHeight: 1 }}>{item.desc}</p>
                             <a href="#booking" style={{
                                 display: 'flex',
                                 alignItems: 'center',
