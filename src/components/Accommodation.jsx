@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ChevronRight } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const accommodations = [
     {
@@ -23,8 +27,36 @@ const accommodations = [
 ];
 
 const Accommodation = () => {
+    const sectionRef = useRef(null);
+    const cardsRef = useRef([]);
+
+    useEffect(() => {
+        cardsRef.current.forEach((card, index) => {
+            gsap.fromTo(card,
+                {
+                    y: 100,
+                    opacity: 0,
+                    scale: 0.95
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.2,
+                    delay: index * 0.2,
+                    ease: 'power4.out',
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        });
+    }, []);
+
     return (
-        <section id="accommodation" className="accommodation-section" style={{ background: 'var(--bg-light)', color: 'var(--text-dark)' }}>
+        <section ref={sectionRef} id="accommodation" className="accommodation-section" style={{ background: 'var(--bg-light)', color: 'var(--text-dark)' }}>
             <div className="section-header mb-40">
                 <h2 className="acc-title">Suites & <span style={{ color: 'var(--primary)' }}>Villas</span></h2>
                 <p style={{ fontSize: '1.4rem', opacity: 0.8, maxWidth: '600px', fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', lineHeight: 1.4 }}>
@@ -34,14 +66,16 @@ const Accommodation = () => {
 
             <div className="accommodation-grid">
                 {accommodations.map((item, index) => (
-                    <div key={index} className="accommodation-card" style={{
-                        position: 'relative',
-                        overflow: 'hidden',
-                        borderRadius: '0px', /* Minimalist flat style */
-                        background: '#fff',
-                        boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
-                        transition: 'var(--transition)'
-                    }}>
+                    <div key={index}
+                        ref={el => cardsRef.current[index] = el}
+                        className="accommodation-card" style={{
+                            position: 'relative',
+                            overflow: 'hidden',
+                            borderRadius: '0px', /* Minimalist flat style */
+                            background: '#fff',
+                            boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
+                            transition: 'var(--transition)'
+                        }}>
                         <div className="image-box acc-image-box">
                             <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'var(--transition)' }} className="acc-img" />
                         </div>

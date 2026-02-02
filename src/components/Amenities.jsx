@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Waves, Utensils, ShieldCheck, HeartPulse, Dumbbell, BookOpen, Gamepad2, Flag, Target, Palmtree } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const amenities = [
     { icon: <HeartPulse />, title: 'Spa & Salon', desc: 'Holistic wellness treatments.' },
@@ -14,10 +18,38 @@ const amenities = [
 ];
 
 const Amenities = () => {
+    const sectionRef = useRef(null);
+    const gridRef = useRef(null);
+
+    useEffect(() => {
+        const cards = gridRef.current.querySelectorAll('.amenity-card');
+
+        gsap.fromTo(cards,
+            {
+                y: 100,
+                opacity: 0,
+                scale: 0.9
+            },
+            {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+                duration: 1,
+                stagger: 0.15,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            }
+        );
+    }, []);
+
     return (
-        <section id="services" className="amenities-section" style={{ background: '#fff', color: 'var(--text-dark)' }}>
+        <section ref={sectionRef} id="services" className="amenities-section" style={{ background: '#fff', color: 'var(--text-dark)' }}>
             <h2 className="amenities-title text-center mb-40">Discover <span className="text-gold">Luxury Amenities</span></h2>
-            <div className="amenities-grid">
+            <div ref={gridRef} className="amenities-grid">
                 {amenities.map((item, index) => (
                     <div key={index} className="amenity-card">
                         <div className="text-gold mb-20" style={{ transform: 'scale(1.5)', display: 'inline-block' }}>
