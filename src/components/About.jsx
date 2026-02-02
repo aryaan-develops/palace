@@ -47,12 +47,20 @@ const About = () => {
         }}>
             <div className="about-container">
                 <div className="about-image-wrapper">
-                    <div ref={imageRef} className="about-image-inner">
+                    <div ref={imageRef} className="about-image-inner" style={{ position: 'relative' }}>
                         <img
                             src="/images/lobby.png"
                             alt="The Story"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
+                        {/* Thought Cloud Gossip */}
+                        <div className="thought-bubble-container">
+                            <div className="thought-bubble">
+                                <span className="gossip-text">Gossiping with my friend... <br />"Bestie, just enjoy the luxury! ✨"</span>
+                            </div>
+                            <div className="thought-dot dot-1"></div>
+                            <div className="thought-dot dot-2"></div>
+                        </div>
                     </div>
                 </div>
                 <div ref={textRef} className="about-text">
@@ -84,6 +92,63 @@ const About = () => {
                 .title-responsive {
                     font-size: 4.5rem;
                     line-height: 1;
+                }
+
+                /* Thought Bubble Styles */
+                .thought-bubble-container {
+                    position: absolute;
+                    top: 15%;
+                    right: 15%;
+                    z-index: 10;
+                    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+                    animation: float-bubble 4s infinite ease-in-out;
+                    pointer-events: none;
+                    opacity: 0;
+                    transform: scale(0.5) translateY(20px);
+                    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
+
+                .about-image-inner:hover .thought-bubble-container {
+                    opacity: 1;
+                    transform: scale(1) translateY(0);
+                }
+
+                .thought-bubble {
+                    background: #fff;
+                    padding: 20px 30px;
+                    border-radius: 50px;
+                    color: var(--sage);
+                    font-family: 'Cormorant Garamond', serif;
+                    font-style: italic;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    border: 1px solid rgba(0,0,0,0.05);
+                    position: relative;
+                }
+
+                .thought-dot {
+                    background: #fff;
+                    border-radius: 50%;
+                    position: absolute;
+                }
+
+                .dot-1 {
+                    width: 20px;
+                    height: 20px;
+                    bottom: -15px;
+                    left: 20%;
+                }
+
+                .dot-2 {
+                    width: 12px;
+                    height: 12px;
+                    bottom: -35px;
+                    left: 10%;
+                }
+
+                @keyframes float-bubble {
+                    0%, 100% { transform: translateY(0) rotate(-2deg); }
+                    50% { transform: translateY(-15px) rotate(2deg); }
                 }
 
                 @media (max-width: 1024px) {
