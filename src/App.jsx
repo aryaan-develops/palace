@@ -5,6 +5,7 @@ import About from './components/About';
 import Accommodation from './components/Accommodation';
 import Amenities from './components/Amenities';
 import CustomCursor from './components/CustomCursor';
+import MiniCloud from './components/MiniCloud';
 import Lenis from '@studio-freight/lenis';
 import './index.css';
 
@@ -38,6 +39,7 @@ function App() {
   return (
     <div className="app-container">
       <CustomCursor />
+      <MiniCloud />
       <Navbar />
       <main>
         <div id="home">
